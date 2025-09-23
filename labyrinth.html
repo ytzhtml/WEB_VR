@@ -1,0 +1,132 @@
+<!-- notes 
+ to have both textures show up : sides-->
+
+
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  </head>
+
+  <body>
+
+
+
+    <a-scene>
+
+      <a-assets>
+        <img id="bricks" src="./assets/Briques.jpg">
+      </a-assets>
+
+        <!-- Murs -->
+        
+
+
+        <!-- Enivronnement -->
+      <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+      
+      <!-- Walls -->
+      <a-plane 
+      position="0 2 -2" 
+      rotation="0 0 0" 
+      width = "4" 
+      height="4" 
+      color="#2460bf">
+    </a-plane>
+
+      <a-plane 
+      position="-2 2 0" 
+      rotation="0 90 0" 
+      width="4" 
+      height="4" 
+      color="#2460aa">
+    </a-plane>
+
+      <a-plane 
+      position="2 2 0" 
+      rotation="0 -90 0" 
+      width="4" 
+      height="4" 
+      color="#39abc4">
+    </a-plane>
+
+      <!-- Exit wall  -->
+      <a-plane 
+      position="0.5 2 2" 
+      rotation="0 180 0" 
+      width="3" 
+      height="4" 
+      color="#58a6b8">
+    </a-plane>
+
+      <!-- Double Dividers -->
+      <a-plane 
+      position="1 2 0" 
+      rotation="0 0 0" 
+      width="2" 
+      height="4" 
+      color="#CC1228" 
+      side="double">
+    </a-plane>
+
+      <a-plane 
+      position="-1 2 1" 
+      rotation="0 0 0" 
+      width="2" 
+      height="4" 
+      color="#CC1228" 
+      side="double">
+    </a-plane>
+
+      <!-- Single Dividers -->      
+      <a-plane position="-0.5 2 -1" 
+      rotation="0 0 0" 
+      width="1" 
+      height="4" 
+      color="#84e4cc" 
+      side="double">
+    </a-plane>
+
+      <a-plane 
+      position="-1 2 -1.5" 
+      rotation="0 90 0" 
+      width="1" 
+      height="4" 
+      color="#F0CB58" 
+      side="double">
+    </a-plane>
+
+    <a-plane 
+      position="1 2 -1.5" 
+      rotation="0 90 0" 
+      width="1" 
+      height="4" 
+      color="#ff1493" 
+      side="double">
+    </a-plane>
+
+     <a-plane 
+      position="1 2 1.5" 
+      rotation="0 90 0" 
+      width="1" 
+      height="4" 
+      color="#d15252" 
+      side="double">
+    </a-plane>
+
+    <a-plane 
+      position="-1 2 0.5" 
+      rotation="0 90 0" 
+      width="1" 
+      height="4" 
+      color="#F0CB58" 
+      side="double">
+    </a-plane>
+
+      
+    </a-scene>
+
+
+
+  </body>
+</html>
