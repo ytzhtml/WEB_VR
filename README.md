@@ -1,7 +1,11 @@
-#DNMADE 2
+# DNMADE 2_
 
-##WEB_VR_17.09
-* [yaritza_petiteau_textures](./demo_VR.html)
+## 17.09
 
-* [labyrinth](labyrinth.html)
+* [y.p_textures](https://ytzhtml.github.io/WEB_VR/demo_VR.html)
+
+## 23.09
+
+* [y.p_labyrinth](https://ytzhtml.github.io/WEB_VR/labyrinth.html)
+
 
