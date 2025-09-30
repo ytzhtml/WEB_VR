@@ -6,11 +6,13 @@
 
 ## 23.09
 
-* [y.p_labyrinth](https://ytzhtml.github.io/WEB_VR/labyrinth.html)
+* [y.p_labyrinth_v1](https://ytzhtml.github.io/WEB_VR/labyrinth_v1.html)
 
 ## 30.09
 
 * [y.p_what_a_mess](https://ytzhtml.github.io/WEB_VR/what_a_mess.html)
+* [y.p_labyrinth_v2](https://ytzhtml.github.io/WEB_VR/labyrinth_v2.html)
+
 
 
 
