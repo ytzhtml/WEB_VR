@@ -1,0 +1,144 @@
+<!-- notes 
+ to have both textures show up : side="double"
+ -->
+
+
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  </head>
+
+  <body>
+
+
+
+    <a-scene>
+
+      <a-assets>
+        <img id="halftone" src="./assets/img/halftone.jpg">
+        <a-mixin id="black_wall" color="#292828"></a-mixin>
+      </a-assets>
+
+
+        <!-- Enivronnement -->
+      <a-plane src="#halftone" mixin="black_wall" position="0 0 0" rotation="-90 0 0" width="4" height="4" ></a-plane>
+      <a-sky src="#halftone" mixin="black_wall" repeat="4000 4000"></a-sky>
+      <a-entity light="color: #520202; intensity: 10" position="0 3 0"></a-entity>
+      <a-plane  src="#halftone" mixin="black_wall" position="0 4 0" rotation="-90 0 0" width="4" height="4" side="double"></a-plane>
+
+      
+      <!-- Walls -->
+      <a-plane 
+      src="#halftone"
+      mixin="black_wall"
+      position="0 2 -2" 
+      rotation="0 0 0" 
+      width = "4" 
+      height="4" 
+      side="double">
+    </a-plane>
+
+      <a-plane 
+      src="#halftone"
+      mixin="black_wall"
+      position="-2 2 0" 
+      rotation="0 90 0" 
+      width="4" 
+      height="4" 
+      side="double">
+    </a-plane>
+
+      <a-plane 
+      src="#halftone"
+      mixin="black_wall"
+      position="2 2 0" 
+      rotation="0 -90 0" 
+      width="4" 
+      height="4" 
+      side="double">
+    </a-plane>
+
+      <!-- Exit wall  -->
+      <a-plane 
+      src="#halftone"
+      mixin="black_wall"
+      position="0.5 2 2" 
+      rotation="0 180 0" 
+      width="3" 
+      height="4" 
+      side="double">
+    </a-plane>
+
+      <!-- Double Dividers -->
+      <a-plane 
+      src="#halftone" mixin="black_wall"
+
+      position="1 2 0.2" 
+      rotation="0 0 0" 
+      width="2" 
+      height="4" 
+      side="double">
+    </a-plane>
+
+      <a-plane 
+      src="#halftone" mixin="black_wall"
+      position="-1 2 1" 
+      rotation="0 0 0" 
+      width="2" 
+      height="4" 
+      side="double">
+    </a-plane>
+
+      <!-- Single Dividers -->      
+      <a-plane
+      src="#halftone" mixin="black_wall"
+      position="-0.5 2 -1" 
+      rotation="0 0 0" 
+      width="1" 
+      height="4" 
+      side="double">
+    </a-plane>
+
+      <a-plane 
+      src="#halftone" mixin="black_wall"
+      position="-1 2 -1.5" 
+      rotation="0 90 0" 
+      width="1" 
+      height="4"  
+      side="double">
+    </a-plane>
+
+    <a-plane 
+    src="#halftone" mixin="black_wall"
+      position="1 2 -1.5" 
+      rotation="0 90 0" 
+      width="1" 
+      height="4" 
+      side="double">
+    </a-plane>
+
+     <a-plane 
+     src="#halftone" mixin="black_wall"
+      position="1 2 1.5" 
+      rotation="0 90 0" 
+      width="1" 
+      height="4" 
+      side="double">
+    </a-plane>
+
+    <a-plane 
+    src="#halftone" mixin="black_wall"
+      position="-1 2 0.5" 
+      rotation="0 90 0" 
+      width="1" 
+      height="4" 
+      side="double">
+    </a-plane>
+
+      
+    </a-scene>
+
+
+
+  </body>
+</html>
