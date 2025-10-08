@@ -12,6 +12,7 @@
 
 * [y.p_what_a_mess](https://ytzhtml.github.io/WEB_VR/what_a_mess.html)
 * [y.p_labyrinth_v2](https://ytzhtml.github.io/WEB_VR/labyrinth_v2.html)
+* [y.p_labyrinth_v3](https://ytzhtml.github.io/WEB_VR/labyrinth_v3.html)
 
 
 
