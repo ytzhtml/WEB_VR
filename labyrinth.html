@@ -1,0 +1,141 @@
+<!-- Editing notes 
+  Order of asset list per width type
+   -y
+ PLAYER
+    y
+ -->
+
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.6.0/dist/aframe-extras.min.js"></script>
+
+  </head>
+
+  <body>
+
+
+
+    <a-scene>
+
+        <a-entity camera look-controls wasd-controls="acceleration: 4" position="0 1.6 0"></a-entity>
+
+      <a-assets>
+        <img id="tiles" src="./assets/img/red_tiles.jpg" >
+        <img id="wp" src="./assets/img/tiles_strawberry.png" >
+
+        <a-asset-item id="butterfly_brown" src="./assets/3Danims/butterfly/butterfly_1.glb"></a-asset-item>
+        <a-asset-item id="butterfly_orange" src="./assets/3Danims/butterfly/butterfly_2.glb"></a-asset-item>
+        <a-asset-item id="fish" src="./assets/3Dmodels/fish/fish.glb"></a-asset-item>
+
+      </a-assets>
+
+
+        <!-- Enivronnement Floor - Sky - Ceiling--> 
+      <a-plane src="#tiles"  position="0 0 0" rotation="-90 0 0" width="4" height="4" repeat="4 4"></a-plane>
+      <a-sky src="#tiles"  repeat="2 2"></a-sky>
+      <a-plane  src="#tiles"  position="0 2 0" rotation="-90 0 0" width="4" height="4" side="double" repeat="4 4"></a-plane>
+      
+      
+      <!-- Edge Walls -->
+      <a-plane src="#wp" repeat="2 1" position="0 1 -2" rotation="0 180 0" width = "4" height="2" side="double"> </a-plane>
+      <a-plane src="#wp" repeat="2 1" position="-2 1 0" rotation="0 90 0" width="4" height="2" side="double"></a-plane>
+      <a-plane src="#wp" repeat="2 1" position="2 1 0" rotation="0 -90 0" width="4" height="2" side="double"></a-plane>
+
+      <!-- Exit wall  -->
+      <a-plane src="#wp" repeat="1.5 1" position="0.5 1 2" rotation="0 0 0" width="3" height="2" side="double"></a-plane>
+      <a-plane src="#wp"repeat="0.25 1"position="-1.75 1 2" rotation="0 180 0"  width="0.5" height="2" side="double"></a-plane>
+
+
+
+    <!-- Inner Walls : Categorized by width value-->
+
+    <!-- Big Dividers w>1.5-->
+
+    <a-plane src="#wp" repeat="1 1"
+    position="-0.5 1 -1" rotation="0 0 0"width="2" height="2" side="double"> </a-plane>
+
+    <a-plane src="#wp"repeat="0.75 1"
+    position="-1.25 1 -0.5" rotation="0 180 0" width="1.5" height="2" side="double"> </a-plane>
+
+    <a-plane src="#wp"repeat="0.85 1"
+    position="1.5 1 0.65" rotation="0 90 0" width="1.7" height="2" side="double"></a-plane>
+
+
+
+
+
+      <!-- Small Dividers 1<w<1.5-->      
+    
+    <a-plane src="#wp" repeat="0.6 1"
+    position="0.5 1 -0.8" rotation="0 90 0" width="1.2" height="2" side="double"></a-plane>
+
+
+    <a-plane src="#wp" repeat="0.5 1"
+    position="-0.5 1 -1.5" rotation="0 90 0" width="1" height="2"  side="double"></a-plane>
+
+    <a-plane src="#wp"repeat="0.5 1"  
+    position="1 1 -0.2" rotation="0 0 0" width="1" height="2" side="double"></a-plane>
+
+    <a-plane src="#wp" repeat="0.5 1"
+    position="1.5 1 -0.75" rotation="0 0 0" width="1" height="2" side="double"></a-plane>
+
+
+    <a-plane src="#wp" repeat="0.51"
+    position="0 1 1" rotation="0 90 0" width="1" height="2" side="double"></a-plane>
+
+    <a-plane src="#wp"repeat="0.5 1" 
+    position="-1 1 1.5" rotation="0 90 0" width="1" height="2" side="double"></a-plane>
+    
+    <a-plane src="#wp" repeat="0.5 1" 
+    position="-0.5 1 1" rotation="0 0 0" width="1" height="2" side="double"></a-plane>
+    
+
+    <a-plane src="#wp" repeat="0.5 1"
+    position="-1 1 0.5" rotation="0 0 0" width="1" height="2" side="double"></a-plane>
+
+    <a-plane src="#wp" repeat="0.5 1"
+    position="-1.5 1 1" rotation="0 90 0" width="1" height="2" side="double"></a-plane>
+
+    <a-plane src="#wp" repeat="0.5 1"
+    position="0.75 1 1.5" rotation="0 90 0" width="1" height="2" side="double"></a-plane>
+
+<!-- Mini Dividers w<1-->
+
+    <a-plane src="#wp" repeat="0.375 1"
+    position="1.4 1 -1.6" rotation="0 90 0" width="0.75" height="2" side="double"></a-plane>
+
+    <a-plane src="#wp" repeat="0.25 1"
+    position="-1.25 1 1.5" rotation="0 0 0" width="0.5" height="2" side="double"></a-plane>
+
+    <a-plane src="#wp" repeat="0.25 1"
+    position="-1.5 1 -0.25" rotation="0 90 0" width="0.5" height="2" side="double"></a-plane>     
+    
+    <a-plane src="#wp"  repeat="0.25 1"
+    position="-0.5 1 0.25" rotation="0 90 0" width="0.5" height="2" side="double"></a-plane>
+
+    <a-plane src="#wp" repeat="0.375 1"
+    position="0.37 1 0.5"  rotation="0 0 0" width="0.75" height="2" side="double"></a-plane>
+
+
+
+<!-- Easter Eggs -->
+
+
+  <a-entity id="bb_1"  
+  gltf-model="#butterfly_brown" animation-mixer="clip: metarig|2; timeScale: 2"
+  position="-0.46 1.4 -1.50" scale="0.005 0.005 0.005" rotation="-90 90 0" ></a-entity>
+  
+  <a-entity id="bo_1" 
+  gltf-model="#butterfly_orange" animation-mixer
+  position="-0.5 1.5 1.4" scale="0.01 0.01 0.01" rotation="0 130 0" ></a-entity>
+
+  <a-entity id="fish_1" 
+  gltf-model="#fish" animation-mixer
+  position="0.06 1.7 -1.4" scale="0.001 0.001 0.001" rotation="0 40 -10" ></a-entity>
+
+
+      
+    </a-scene>
+  </body>
+</html>
