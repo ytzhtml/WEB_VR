@@ -1,103 +1,54 @@
-<!-- Added muhroom animation on the 08.10 -->
-
 <html>
-
-
   <head>
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.6.0/dist/aframe-extras.min.js"></script>
 
   </head>
-
-
-
-
   <body>
     <a-scene>
 
-
-      
         <a-assets>
             <img id="wood" src="./assets/img/wood_texture.jpg">
-
-
+            <img id="forest" src="./assets/img/forest.jpg">
 
             <a-asset-item id="cute_mush" src="./assets/3Dmodels/mushroom/mushroom_friend.glb"></a-asset-item>
             <a-asset-item id="tree_mush" src="./assets/3Dmodels/mushroom/mushroom_tree.glb"></a-asset-item>
-            <a-asset-item id="cute_mushy" src="./assets/3Dmodels/mushroom/mushroom_friend.glb"></a-asset-item>
             <a-asset-item id="y_glow_mush" src="./assets/3Dmodels/mushroom/mushroom_on_tree_yellow_baked_lighting.glb"></a-asset-item>
-            <a-asset-item id="three_mush" src="./assets/3Dmodels/mushroom/mushroom_glowing.glb"></a-asset-item>
             <a-asset-item id="scary_mush" src="./assets/3Dmodels/mushroom/pc_nightmare_mushroom.glb"></a-asset-item>
-            <a-asset-item id="g_glow_mush" src="./assets/3Dmodels/mushroom/mushroom_fungal_vertebrae.glb"></a-asset-item>
-            <a-asset-item id="tree_mush" src="./assets/3Dmodels/mushroom/mushroom_fungal_tree.glb"></a-asset-item>
-            <a-asset-item id="parasol_mush" src="./assets/3Dmodels/mushroom/mushroom_parasol.glb"></a-asset-item>
-
-
-        
-        
-          </a-assets>
+        </a-assets>
 
     <a-entity camera look-controls wasd-controls="acceleration: 5" position="0 1.6 0"></a-entity>
 
         <!-- Environment -->
-    <a-sky color="#304d6d"></a-sky>
-
-
-
-          <!-- Walls -->
-      <a-plane src="#wood" color="#4f2509" position="0 1.5 -1.5" rotation="0 0 0" width = "3" height="3" ></a-plane>
-
-      <a-plane src="#wood" color="#4f2509" position="-1.5 1.5 0" rotation="0 90 0" width="3" height="3" ></a-plane>
-
-      <a-plane src="#wood"color="#4f2509"position="1.5 1.5 0" rotation="0 -90 0" width="3" height="3"></a-plane>
+    <a-sky src="#forest" repeat="1 1" normal-map="forest" color="#4f2509" roughness="10"></a-sky>
       
-      <a-plane src="#wood"color="#4f2509" position="0 1.5 1.5"  rotation="0 180 0"   width="3"  height="3"side="double" ></a-plane>
-
-
-
-
-      </a-plane>
-
-        <!-- Floor assets 
-         <a-entity gltf-model="#name" position="0 0 0" scale="1 1 1" roatation="0 0 0"></a-entity> 
-         -->
-      <a-plane position="0 0 0" rotation="-90 0 0" width="3" height="3" color="#4f2509" side="double"
-      src="#wood"
-      repeat="1 1" 
-      normal-map="wood"
-      rougheness="7"></a-plane>
-      <a-plane position="0 3 0" rotation="-90 0 0" width="3" height="3" color="#4f2509" side="double"
-      src="#wood"
-      repeat="1 1" 
-      normal-map="wood"
-      rougheness="7"></a-plane>
-      
-      
+      <!-- Friendly Looking Mushroom-->
       <a-entity gltf-model="#cute_mush" position="-.0.9 1.8 -1.28" scale="0.005 0.005 0.005" rotation="16.1 20.54 -10.9" ></a-entity>
       <a-entity gltf-model="#cute_mush" position="1.02 1.4 0.55" scale="0.005 0.005 0.005" rotation="7.5 -112 -8.2" ></a-entity>
-      <a-entity gltf-model="#cute_mush" position="-1 0.94 0.6" scale="0.005 0.005 0.005" rotation="-3 130 3" ></a-entity>
+      <a-entity gltf-model="#cute_mush" position="-0.04 0.94 1.1" scale="0.005 0.005 0.005" rotation="-13.6 161.2 -2.45" ></a-entity>
       <a-entity gltf-model="#cute_mush" position="-1.3 1.724 -1.4" scale="0.01 0.01 0.01" rotation="16 46 2" ></a-entity>
 
-    
+    <!-- Vertical Yellow-Orange Mushroom -->
       <a-entity gltf-model="#tree_mush" position="0.3 -2.5 1" scale="0.01 0.01 0.01" rotation="0 -60 0"></a-entity>
-      <a-entity gltf-model="#tree_mush" position="-0.5 -4.8 -0.7" scale="0.01 0.01 0.01" rotation="0 132 0"></a-entity>
+      <a-entity gltf-model="#tree_mush" position="-2.6 6.820 0.4" scale="0.01 0.01 0.01" rotation="0 0 180"></a-entity> <!-- upside down-->
+      <a-entity gltf-model="#tree_mush" position="-0.5 -4.8 -0.7" scale="0.01 0.01 0.01" rotation="0 132 0"></a-entity> <!-- upside down center -->
+      <a-entity gltf-model="#tree_mush" position="2.6 4.6 1.5" scale="0.01 0.01 0.01" rotation="8 85 150"></a-entity> <!-- upside down a bit lower -->
+
+
+      <!-- Puffy Yellow Mushroom on a Tree Trunk -->
       <a-entity gltf-model="#y_glow_mush" position="0 -0.5 -0.7" scale="0.002 0.002 0.002" rotation="0 100 0"></a-entity> 
       <a-entity gltf-model="#y_glow_mush" position="1.2 -0.5 1" scale="0.002 0.002 0.002" rotation="0 -1.2 0"></a-entity> 
-      <a-entity gltf-model="#g_glow_mush" position="-1 0.57 0.75" scale="1 0.5 1" rotation="0 20 -20"></a-entity> 
-      <!-- Upside down -->
-      <a-entity gltf-model="#tree_mush" position="-2.6 6.820 0.4" scale="0.01 0.01 0.01" rotation="0 0 180"></a-entity>
-      <a-entity gltf-model="#three_mush" position="1 2.3 1" scale="0.2 0.2 0.2" rotation="0 20 180"></a-entity> 
+      <a-entity gltf-model="#y_glow_mush" position="2.8 -2.6 8.3" scale="0.05 0.05 0.05" rotation="0 0 0"></a-entity> <!--floor type-->
+      <a-entity gltf-model="#y_glow_mush" position="9.6 -2.6 -0.7" scale="0.05 0.05 0.05" rotation="0 90 0"></a-entity> <!--floor type-->
 
-            <a-entity gltf-model="#scary_mush" animation-mixer
-              position="1.4 2.67 -1.1" scale="0.1 0.1 0.1" rotation="0 -50 0" ></a-entity> 
-
+      <!--  Scary Animated Mushrooms -->
+      <a-entity gltf-model="#scary_mush" animation-mixer
+      position="1.56 2.67 -1.3" scale="0.1 0.1 0.1" rotation="0 -25 0" ></a-entity> 
+      
+       <a-entity gltf-model="#scary_mush" animation-mixer
+      position="-0.2 7 4" scale="0.3 0.3 0.3" rotation="0 160 0" ></a-entity> 
 
 
     </a-scene>
   </body>
-
-
-
 </html>
-
-
