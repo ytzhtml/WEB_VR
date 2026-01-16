@@ -11,7 +11,8 @@
 * [y.p_labyrinth](https://ytzhtml.github.io/WEB_VR/labyrinth.html)
 
 ##Skybox
-* [skybokmountains](https://ytzhtml.github.io/WEB_VR/skybox/skybox/html)
+* [skyboxmountains](https://ytzhtml.github.io/WEB_VR/skybox/skybox.html)
+
 
 
 
